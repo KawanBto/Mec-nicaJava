@@ -1,7 +1,7 @@
-🛠️ # Mecânica Autonexus
+🛠️ Mecânica Autonexus
 Um sistema de gerenciamento robusto, desenvolvido em Java, projetado para otimizar o dia a dia de oficinas automotivas. O Mecânica Autonexus centraliza as operações, desde o cadastro de clientes e veículos até o controle de ordens de serviço e gerenciamento de filas de atendimento, garantindo eficiência e organização.
 
-🚀 # Funcionalidades Principais
+🚀 Funcionalidades Principais
 O sistema segue um padrão intuitivo de Menu > Grid > Cadastro, facilitando a navegação e o gerenciamento de informações. Ele abrange as seguintes áreas essenciais:
 
 Clientes: Gerencie o cadastro completo de clientes, com visualização em grid e telas dedicadas para criação e edição de dados.
@@ -16,7 +16,7 @@ Busca Avançada: Uma ferramenta poderosa para filtragem e consulta de dados, abr
 
 Fila de Atendimento: Um módulo dinâmico para gerenciar a chegada de clientes. As informações são exibidas em grid e podem ser cadastradas, mas são resetadas ao encerrar o sistema (útil para gerenciamento de fluxo diário).
 
-💻 # Tecnologias Utilizadas
+💻 Tecnologias Utilizadas
 Linguagem de Programação: Java
 
 Interface Gráfica: JavaFX (para construção das telas e experiência do usuário)
