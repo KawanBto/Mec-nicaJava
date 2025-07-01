@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1036.0" style="-fx-background-color: #bdc0c3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.Menu">
+   <children>
+      <Text layoutX="403.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oficina Automotiva">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="btnClientesClick" fitHeight="150.0" fitWidth="200.0" layoutX="219.0" layoutY="259.0" onMouseClicked="#btnClientesClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Clientes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnBusca" fitHeight="150.0" fitWidth="200.0" layoutX="484.0" layoutY="457.0" onMouseClicked="#btnAvancadaClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Busca%20Avançada.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnAtendimento" fitHeight="150.0" fitWidth="200.0" layoutX="721.0" layoutY="457.0" onMouseClicked="#btnAtendimentoClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Fila%20de%20Atendimento.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnServico" fitHeight="150.0" fitWidth="200.0" layoutX="221.0" layoutY="457.0" onMouseClicked="#btnServicoClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Ordens%20de%20Serviço.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnVeiculos" fitHeight="150.0" fitWidth="200.0" layoutX="724.0" layoutY="259.0" onMouseClicked="#btnVeiculoslick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Veiculos.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="btnFuncionarios" fitHeight="150.0" fitWidth="200.0" layoutX="481.0" layoutY="259.0" onMouseClicked="#btnFuncionariosClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Funcionarios.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="92.0" layoutY="-1.0" stroke="WHITE" strokeType="INSIDE" width="1036.0" />
+      <Text layoutX="202.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temos por objetivo oferecer serviço profissional e atendimento personalizado, com foco no seu encantamento. Ultrapassar expectativas é o nosso maior compromisso" textAlignment="CENTER" wrappingWidth="631.6044921875">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="84.0" fitWidth="124.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/LOGO.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

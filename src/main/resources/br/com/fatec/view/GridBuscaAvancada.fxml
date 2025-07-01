@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: #bdc0c3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.GridBuscaAvancada">
+   <children>
+      <Text layoutX="64.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUSCA AVANÇADA DE ORDENS DE SERVIÇO">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="92.0" layoutX="-8.0" stroke="WHITE" strokeType="INSIDE" width="1216.0" />
+      <ImageView fitHeight="70.0" fitWidth="107.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@LOGO.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="138.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/LOGO.png" />
+         </image>
+      </ImageView>
+
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="520.0" layoutX="66.0" layoutY="145.0" stroke="BLACK" strokeType="INSIDE" width="1064.0" />
+
+      <!-- Filtros Detalhados (Data Saída Efetiva Fim e Serviço removidos) -->
+      <Text layoutX="88.0" layoutY="183.0" text="Nome Cliente:" />
+      <ComboBox fx:id="cbNome" editable="true" layoutX="88.0" layoutY="193.0" prefHeight="25.0" prefWidth="150.0" promptText="Nome do Cliente" />
+
+      <Text layoutX="268.0" layoutY="183.0" text="Placa Veículo:" />
+      <ComboBox fx:id="cbPlaca" editable="true" layoutX="268.0" layoutY="193.0" prefWidth="120.0" promptText="Placa" />
+      
+      <Text layoutX="408.0" layoutY="183.0" text="Funcionário:" />
+      <ComboBox fx:id="cbFuncionario" editable="true" layoutX="408.0" layoutY="193.0" prefWidth="150.0" promptText="Funcionário" />
+      
+      <Text layoutX="588.0" layoutY="183.0" text="Status OS:" />
+      <ComboBox fx:id="cbStatus" editable="true" layoutX="588.0" layoutY="193.0" prefHeight="25.0" prefWidth="120.0" promptText="Status" />
+      
+      <!-- O filtro de Serviço foi removido daqui -->
+
+      <Text layoutX="88.0" layoutY="233.0" text="Data Entrada Início:" />
+      <DatePicker fx:id="dpDataEntradaInicio" layoutX="88.0" layoutY="243.0" prefWidth="150.0" promptText="AAAA-MM-DD" />
+      
+      <Text layoutX="268.0" layoutY="233.0" text="Data Entrada Fim:" />
+      <DatePicker fx:id="dpDataEntradaFim" layoutX="268.0" layoutY="243.0" prefWidth="150.0" promptText="AAAA-MM-DD" />
+
+      <!-- Data Saída Efetiva Início será o único DatePicker para saída, reposicionado -->
+      <Text layoutX="448.0" layoutY="233.0" text="Data Saída Efetiva:" />
+      <DatePicker fx:id="dpDataSaidaEfetivaInicio" layoutX="448.0" layoutY="243.0" prefWidth="150.0" promptText="AAAA-MM-DD" />
+      
+      <!-- O filtro de Data Saída Efetiva Fim foi removido daqui -->
+      
+      <Button fx:id="btnFiltrar" layoutX="954.0" layoutY="170.0" mnemonicParsing="false" onAction="#filtrarResultados" prefHeight="39.0" prefWidth="138.0" style="-fx-background-color: #343A40;" text="FILTRAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLimparFiltros" layoutX="954.0" layoutY="210.0" mnemonicParsing="false" onAction="#limparFiltros" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #555555;" text="LIMPAR FILTROS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+
+      <!-- Tabela de Resultados Detalhada (coluna Data Saída Efetiva removida) -->
+      <TableView fx:id="tvResultados" layoutX="88.0" layoutY="283.0" prefHeight="350.0" prefWidth="1024.0">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colNome" prefWidth="120.0" text="CLIENTE" />
+            <TableColumn fx:id="colTelefone" prefWidth="100.0" text="TELEFONE" />
+            <TableColumn fx:id="colPlaca" prefWidth="80.0" text="PLACA" />
+            <TableColumn fx:id="colMarca" prefWidth="80.0" text="MARCA" />
+            <TableColumn fx:id="colModelo" prefWidth="100.0" text="MODELO" />
+            <TableColumn fx:id="colFuncionarioResponsavel" prefWidth="120.0" text="FUNCIONÁRIO" />
+            <TableColumn fx:id="colDataEntrada" prefWidth="90.0" text="ENTRADA" />
+            <TableColumn fx:id="colDataSaidaPrevista" prefWidth="90.0" text="SAÍDA PREV." />
+            <!-- REMOVIDO: TableColumn fx:id="colDataSaidaEfetiva" prefWidth="90.0" text="SAÍDA EFET." / -->
+            <TableColumn fx:id="colValorTotal" prefWidth="80.0" text="VALOR" />
+            <TableColumn fx:id="colStatus" prefWidth="90.0" text="STATUS" />
+            <TableColumn fx:id="colObservacoes" prefWidth="150.0" text="OBSERVAÇÕES" />
+         </columns>
+      </TableView>
+
+      <Button fx:id="btnVoltar" layoutX="969.0" layoutY="691.0" mnemonicParsing="false" onMouseClicked="#btnVoltarClick" prefHeight="31.0" prefWidth="161.0" style="-fx-background-color: #343A40;" text="VOLTAR AO MENU" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

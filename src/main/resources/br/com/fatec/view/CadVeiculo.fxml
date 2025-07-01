@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="644.0" prefWidth="1036.0" style="-fx-background-color: #bdc0c3;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.CadVeiculo">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="92.0" layoutX="-8.0" stroke="WHITE" strokeType="INSIDE" width="1043.0" />
+      
+      <ImageView fitHeight="70.0" fitWidth="107.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/LOGO.png" />
+         </image>
+      </ImageView>
+      
+      <Text fill="#343a40" layoutX="320.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO DE VEÍCULO">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+
+      <VBox layoutX="30.0" layoutY="120.0" prefHeight="420.0" prefWidth="976.0" style="-fx-background-color: white; -fx-border-radius: 5; -fx-background-radius: 5;">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" spacing="20.0">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Proprietário (Cliente):">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <!-- CORREÇÃO AQUI: removido prefWidth="Infinity" -->
+                        <ComboBox fx:id="cmbCliente" editable="true" prefHeight="30.0" prefWidth="257.0" promptText="Selecione ou digite o nome/ID do cliente" />
+                     </children>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Placa:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtPlaca" prefHeight="30.0" prefWidth="175.0" promptText="AAA-0000" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" spacing="20.0">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Marca:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtMarca" prefHeight="30.0" />
+                     </children>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Modelo:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtModelo" prefHeight="30.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" prefHeight="70.0" spacing="20.0">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Ano Fabricação:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtAnoFabricacao" prefHeight="30.0" promptText="AAAA" />
+                     </children>
+                  </VBox>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Cor:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCor" prefHeight="30.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            
+            <Region VBox.vgrow="ALWAYS" />
+            
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="40.0" prefWidth="916.0">
+               <children>
+                  <Button fx:id="btnLimpar" mnemonicParsing="false" onMouseClicked="#btnLimparClick" style="-fx-background-color: #343A40;" text="LIMPAR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnSalvar" mnemonicParsing="false" onMouseClicked="#btnSalvarClick" style="-fx-background-color: #343A40;" text="SALVAR" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      
+      <Button fx:id="btnVoltar" layoutX="868.0" layoutY="570.0" mnemonicParsing="false" onMouseClicked="#btnVoltarClick" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #343A40;" text="VOLTAR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
